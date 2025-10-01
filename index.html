@@ -4,8 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>এলিট ভিশন একাডেমি</title>
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Bengali:wght@400;500;700&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Bengali:wght@400;500;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
     <style>
         * {
             margin: 0;
@@ -18,11 +19,12 @@
             background-color: #f8f9fa;
             color: #333;
             line-height: 1.6;
+            overflow-x: hidden;
         }
         
         .poster-container {
-            width: 1020px;
-            min-height: 960px;
+            width: 100%;
+            min-height: 100vh;
             margin: 0 auto;
             background: linear-gradient(135deg, #f0f7e6 0%, #e6f2dc 100%);
             position: relative;
@@ -37,15 +39,21 @@
             left: 0;
             width: 100%;
             height: 100%;
-            background-image: url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M11 18c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm48 25c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm-43-7c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm63 31c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM34 90c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm56-76c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM12 86c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm28-65c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm23-11c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-6 60c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm29 22c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zM32 63c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm57-13c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-9-21c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM60 91c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM35 41c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM12 60c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2z' fill='%23386c3d' fill-opacity='0.05' fill-rule='evenodd'/%3E%3C/svg%3E");
+            background-image: url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M11 18c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm48 25c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm-43-7c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm63 31c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM34 90c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm56-76c1.657 0 3-1.343 3-3s-.895-3-2-2-2 .895-2 2 .895 2 2 2zM12 86c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm28-65c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm23-11c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-6 60c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm29 22c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zM32 63c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm57-13c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-9-21c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM60 91c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM35 41c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM12 60c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2z' fill='%23386c3d' fill-opacity='0.05' fill-rule='evenodd'/%3E%3C/svg%3E");
             opacity: 0.5;
             z-index: 0;
+            animation: subtleMove 60s infinite linear;
+        }
+        
+        @keyframes subtleMove {
+            0% { transform: translate(0, 0); }
+            100% { transform: translate(50px, 50px); }
         }
         
         .header {
             background: linear-gradient(135deg, #1a5f3f 0%, #2d8659 100%);
             color: white;
-            padding: 30px;
+            padding: 30px 20px;
             text-align: center;
             position: relative;
             overflow: hidden;
@@ -59,35 +67,82 @@
             width: 100%;
             height: 15px;
             background: linear-gradient(90deg, #d4af37 0%, #f1c232 50%, #d4af37 100%);
+            animation: shimmer 3s infinite;
         }
-        .logo{
-            width: 110px;
-            height: 110px;
-            position: relative;
-            contact-item: left;
+        
+        @keyframes shimmer {
+            0% { background-position: -200% 0; }
+            100% { background-position: 200% 0; }
         }
+        
+        .logo-container {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            z-index: 10;
+        }
+        
+        .logo {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            background-color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 0 20px rgba(212, 175, 55, 0.7);
+            animation: logoGlow 3s infinite alternate;
+        }
+        
+        @keyframes logoGlow {
+            0% { box-shadow: 0 0 20px rgba(212, 175, 55, 0.7); }
+            100% { box-shadow: 0 0 30px rgba(212, 175, 55, 0.9); }
+        }
+        
         .bismillah {
-            font-size: 18px;
+            font-size: 1.2rem;
             margin-bottom: 10px;
             font-weight: 500;
+            opacity: 0;
+            animation: fadeIn 1s ease-in forwards;
         }
         
         .title {
-            font-size: 42px;
-            font-weight: 700;
+            font-size: 2.5rem;
+            font-weight: 900;
             margin-bottom: 10px;
             text-shadow: 0 2px 4px rgba(0,0,0,0.2);
+            opacity: 0;
+            animation: slideInFromTop 1s ease-out 0.5s forwards;
+            background: linear-gradient(to right, #ffffff, #f1c232);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            display: inline-block;
         }
         
         .subtitle {
-            font-size: 24px;
-            font-weight: 500;
+            font-size: 1.5rem;
+            font-weight: 700;
             margin-bottom: 15px;
+            opacity: 0;
+            animation: slideInFromLeft 1s ease-out 1s forwards;
+            color: #f1c232;
         }
         
         .description {
-            font-size: 18px;
+            font-size: 1.1rem;
             margin-bottom: 15px;
+            opacity: 0;
+            animation: typewriter 2s steps(40) 1.5s forwards;
+            overflow: hidden;
+            white-space: nowrap;
+            border-right: 2px solid #f1c232;
+            width: 0;
+        }
+        
+        @keyframes typewriter {
+            to { width: 100%; }
         }
         
         .admission-info {
@@ -95,14 +150,39 @@
             padding: 8px 15px;
             border-radius: 20px;
             display: inline-block;
-            font-size: 16px;
+            font-size: 1rem;
             font-weight: 500;
+            opacity: 0;
+            animation: pulse 2s ease-in-out 2.5s forwards;
+        }
+        
+        @keyframes pulse {
+            0% { transform: scale(0.8); opacity: 0; }
+            50% { transform: scale(1.05); }
+            70% { transform: scale(0.95); }
+            100% { transform: scale(1); opacity: 1; }
+        }
+        
+        @keyframes fadeIn {
+            to { opacity: 1; }
+        }
+        
+        @keyframes slideInFromTop {
+            from { transform: translateY(-50px); opacity: 0; }
+            to { transform: translateY(0); opacity: 1; }
+        }
+        
+        @keyframes slideInFromLeft {
+            from { transform: translateX(-50px); opacity: 0; }
+            to { transform: translateX(0); opacity: 1; }
         }
         
         .content {
-            padding: 30px;
+            padding: 20px;
             position: relative;
             z-index: 1;
+            max-width: 1200px;
+            margin: 0 auto;
         }
         
         .section {
@@ -110,21 +190,40 @@
             background-color: white;
             border-radius: 10px;
             padding: 20px;
-            box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+            box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+            transition: all 0.3s ease;
+            border-left: 5px solid #1a5f3f;
+        }
+        
+        .section:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 20px rgba(0,0,0,0.12);
         }
         
         .section-title {
-            font-size: 22px;
+            font-size: 1.4rem;
             font-weight: 700;
             color: #1a5f3f;
             margin-bottom: 15px;
             display: flex;
             align-items: center;
+            position: relative;
         }
         
         .section-title i {
             margin-right: 10px;
             color: #d4af37;
+            font-size: 1.5rem;
+        }
+        
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 50px;
+            height: 3px;
+            background: linear-gradient(90deg, #d4af37, transparent);
         }
         
         .feature-list {
@@ -132,16 +231,27 @@
         }
         
         .feature-list li {
-            margin-bottom: 8px;
+            margin-bottom: 12px;
             display: flex;
             align-items: flex-start;
+            transition: all 0.2s ease;
         }
         
-        .feature-list li i {
+        .feature-list li:hover {
+            transform: translateX(5px);
+        }
+        
+        .feature-list i {
             color: #d4af37;
             margin-right: 10px;
-            font-size: 18px;
+            font-size: 1.2rem;
             flex-shrink: 0;
+            transition: all 0.3s ease;
+        }
+        
+        .feature-list li:hover i {
+            transform: scale(1.2);
+            color: #1a5f3f;
         }
         
         .admission-table {
@@ -162,9 +272,13 @@
             font-weight: 600;
         }
         
+        .admission-table tr:hover td {
+            background-color: #f9f9f9;
+        }
+        
         .islamic-education {
             display: grid;
-            grid-template-columns: repeat(2, 1fr);
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
             gap: 10px;
         }
         
@@ -172,37 +286,76 @@
             display: flex;
             align-items: center;
             background-color: #f0f7e6;
-            padding: 8px 12px;
+            padding: 12px;
             border-radius: 6px;
+            transition: all 0.3s ease;
+            border-left: 3px solid #d4af37;
+        }
+        
+        .islamic-item:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            background-color: #e9f5e0;
         }
         
         .islamic-item i {
             color: #d4af37;
-            margin-right: 8px;
+            margin-right: 10px;
+            font-size: 1.2rem;
+            transition: all 0.3s ease;
+        }
+        
+        .islamic-item:hover i {
+            transform: scale(1.3);
+            color: #1a5f3f;
         }
         
         .teaching-methods {
             display: grid;
-            grid-template-columns: repeat(2, 1fr);
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
             gap: 15px;
         }
         
         .method-card {
             background-color: #f0f7e6;
-            padding: 12px;
+            padding: 15px;
             border-radius: 8px;
             border-left: 4px solid #d4af37;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .method-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 0;
+            height: 100%;
+            background: linear-gradient(90deg, rgba(26,95,63,0.1), transparent);
+            transition: width 0.5s ease;
+        }
+        
+        .method-card:hover::before {
+            width: 100%;
+        }
+        
+        .method-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
         }
         
         .method-title {
             font-weight: 600;
             color: #1a5f3f;
             margin-bottom: 5px;
+            font-size: 1.1rem;
         }
         
         .leadership {
             display: grid;
-            grid-template-columns: repeat(2, 1fr);
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
             gap: 15px;
         }
         
@@ -210,60 +363,116 @@
             background-color: #f0f7e6;
             padding: 15px;
             border-radius: 8px;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .leader-card::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            width: 80px;
+            height: 80px;
+            background: linear-gradient(135deg, transparent 50%, rgba(212, 175, 55, 0.2) 50%);
+            border-radius: 0 0 8px 0;
+        }
+        
+        .leader-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
         }
         
         .leader-name {
             font-weight: 600;
             color: #1a5f3f;
             margin-bottom: 5px;
+            font-size: 1.1rem;
         }
         
         .leader-position {
-            font-size: 14px;
+            font-size: 0.9rem;
             color: #555;
         }
         
         .dates {
-            display: flex;
-            justify-content: space-around;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 15px;
             margin-top: 10px;
         }
         
         .date-card {
             text-align: center;
             background-color: #f0f7e6;
-            padding: 12px;
+            padding: 15px;
             border-radius: 8px;
-            flex: 1;
-            margin: 0 5px;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .date-card::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(212, 175, 55, 0.1) 0%, transparent 70%);
+            transition: all 0.5s ease;
+            opacity: 0;
+        }
+        
+        .date-card:hover::before {
+            opacity: 1;
+        }
+        
+        .date-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
         }
         
         .date-title {
             font-weight: 600;
             color: #1a5f3f;
             margin-bottom: 5px;
-            font-size: 14px;
+            font-size: 0.9rem;
         }
         
         .date-value {
             font-weight: 700;
             color: #d4af37;
+            font-size: 1.1rem;
         }
         
         .contact-info {
-            font-size: 14px;
+            font-size: 0.9rem;
         }
         
         .contact-item {
-            margin-bottom: 8px;
+            margin-bottom: 12px;
             display: flex;
             align-items: flex-start;
+            transition: all 0.3s ease;
+        }
+        
+        .contact-item:hover {
+            transform: translateX(5px);
         }
         
         .contact-item i {
             color: #d4af37;
-            margin-right: 8px;
+            margin-right: 10px;
             flex-shrink: 0;
+            font-size: 1.2rem;
+            transition: all 0.3s ease;
+        }
+        
+        .contact-item:hover i {
+            transform: scale(1.2);
+            color: #1a5f3f;
         }
         
         .contact-label {
@@ -285,47 +494,125 @@
             color: #d4af37;
             font-weight: 600;
         }
+        
+        .cta-button {
+            display: inline-block;
+            background: linear-gradient(135deg, #1a5f3f 0%, #2d8659 100%);
+            color: white;
+            padding: 12px 25px;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: 600;
+            margin-top: 15px;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+            box-shadow: 0 4px 15px rgba(26,95,63,0.3);
+        }
+        
+        .cta-button::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.3), transparent);
+            transition: left 0.7s ease;
+        }
+        
+        .cta-button:hover::before {
+            left: 100%;
+        }
+        
+        .cta-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 7px 20px rgba(26,95,63,0.4);
+        }
+        
+        @media (max-width: 768px) {
+            .title {
+                font-size: 2rem;
+            }
+            
+            .subtitle {
+                font-size: 1.2rem;
+            }
+            
+            .section-title {
+                font-size: 1.2rem;
+            }
+            
+            .content {
+                padding: 15px;
+            }
+            
+            .section {
+                padding: 15px;
+            }
+            
+            .islamic-education {
+                grid-template-columns: 1fr;
+            }
+            
+            .teaching-methods {
+                grid-template-columns: 1fr;
+            }
+            
+            .leadership {
+                grid-template-columns: 1fr;
+            }
+            
+            .logo-container {
+                position: relative;
+                top: auto;
+                left: auto;
+                display: flex;
+                justify-content: center;
+                margin-bottom: 15px;
+            }
+        }
     </style>
 </head>
 <body>
     <div class="poster-container">
-        
         <div class="header">
+            <div class="logo-container">
+                <div class="logo">
+                    <i class="fas fa-graduation-cap fa-3x" style="color: #1a5f3f;"></i>
+                </div>
+            </div>
             <div class="bismillah">বিসমিল্লাহির রাহমানির রাহিম</div>
-            <div>
-            <img class="logo" src="https://i.ibb.co.com/qYZ733Jv/logo-elit-removebg-preview.png">
-        </div>
-            
             <h1 class="title">এলিট ভিশন একাডেমি</h1>
-            <div class="subtitle">(নৈতিক উন্নয়ন, আত্মগঠন ও মেধা লালন)</div>
+            <div class="subtitle">নৈতিক উন্নয়ন, আত্মগঠন ও মেধা লালন</div>
             <div class="description">মনিরামপুরের প্রথম ইংলিশ ভার্সন ও বাংলা মিডিয়াম একাডেমি</div>
             <div class="admission-info">ভর্তি চলিতেছে (২০২৬ শিক্ষাবর্ষ) | আসন সংখ্যা সীমিত</div>
         </div>
         
         <div class="content">
             <div class="section">
-                <h2 class="section-title"><i class="material-icons">visibility</i>আমাদের লক্ষ্য ও প্রত্যয়</h2>
+                <h2 class="section-title"><i class="fas fa-eye"></i>আমাদের লক্ষ্য ও প্রত্যয়</h2>
                 <ul class="feature-list">
-                    <li><i class="material-icons">check_circle</i>বিদেশি অভিজ্ঞতা ও আধুনিক শিক্ষার সমন্বয়ে গোপালপুরে প্রতিষ্ঠিত প্রতিষ্ঠান</li>
-                    <li><i class="material-icons">check_circle</i>আধুনিক ও ইসলামী শিক্ষার সমন্বয়ে উজ্জ্বল ভবিষ্যৎ গড়ার প্রত্যয়</li>
-                    <li><i class="material-icons">check_circle</i>সকল ধর্মের শিক্ষার্থীদের জন্য উন্মুক্ত</li>
+                    <li><i class="fas fa-check-circle"></i>বিদেশি অভিজ্ঞতা ও আধুনিক শিক্ষার সমন্বয়ে গোপালপুরে প্রতিষ্ঠিত প্রতিষ্ঠান</li>
+                    <li><i class="fas fa-check-circle"></i>আধুনিক ও ইসলামী শিক্ষার সমন্বয়ে উজ্জ্বল ভবিষ্যৎ গড়ার প্রত্যয়</li>
+                    <li><i class="fas fa-check-circle"></i>সকল ধর্মের শিক্ষার্থীদের জন্য উন্মুক্ত</li>
                 </ul>
             </div>
             
             <div class="section">
-                <h2 class="section-title"><i class="material-icons">stars</i>আমাদের বৈশিষ্ট্য সমূহ</h2>
+                <h2 class="section-title"><i class="fas fa-star"></i>আমাদের বৈশিষ্ট্য সমূহ</h2>
                 <ul class="feature-list">
-                    <li><i class="material-icons">school</i><span class="highlight">আন্তর্জাতিক মানের তত্ত্বাবধান:</span> বিদেশি বিশ্ববিদ্যালয়ের প্রফেসর এবং শিশু শিক্ষায় ডক্টরেট প্রাপ্ত অধ্যক্ষ দ্বারা পরিচালিত</li>
-                    <li><i class="material-icons">menu_book</i><span class="highlight">দ্বৈত কারিকুলাম:</span> জাতীয় কারিকুলামের অধীনে ইংলিশ ভার্সন এবং বাংলা মিডিয়ামে পাঠদান</li>
-                    <li><i class="material-icons">translate</i><span class="highlight">ভাষা শিক্ষা:</span> ইংরেজি ও আরবি ভাষার উপর স্পেশাল কোর্স</li>
-                    <li><i class="material-icons">groups</i><span class="highlight">ছোট গ্রুপে পাঠদান:</span> প্রতিটি শিক্ষার্থীর প্রতি পূর্ণ মনোযোগ নিশ্চিত করতে ছোট ছোট গ্রুপে ক্লাস</li>
-                    <li><i class="material-icons">computer</i><span class="highlight">ডিজিটাল ক্লাসরুম:</span> কম্পিউটার ও ডিজিটাল ডিসপ্লে ব্যবহার করে আধুনিক পদ্ধতিতে পাঠদান</li>
-                    <li><i class="material-icons">people</i><span class="highlight">অভিভাবক সমন্বয়:</span> শিক্ষার্থীদের অগ্রগতির বিষয়ে অভিভাবকদের সাথে নিয়মিত পর্যালোচনা সভা</li>
+                    <li><i class="fas fa-school"></i><span class="highlight">আন্তর্জাতিক মানের তত্ত্বাবধান:</span> বিদেশি বিশ্ববিদ্যালয়ের প্রফেসর এবং শিশু শিক্ষায় ডক্টরেট প্রাপ্ত অধ্যক্ষ দ্বারা পরিচালিত</li>
+                    <li><i class="fas fa-book"></i><span class="highlight">দ্বৈত কারিকুলাম:</span> জাতীয় কারিকুলামের অধীনে ইংলিশ ভার্সন এবং বাংলা মিডিয়ামে পাঠদান</li>
+                    <li><i class="fas fa-language"></i><span class="highlight">ভাষা শিক্ষা:</span> ইংরেজি ও আরবি ভাষার উপর স্পেশাল কোর্স</li>
+                    <li><i class="fas fa-users"></i><span class="highlight">ছোট গ্রুপে পাঠদান:</span> প্রতিটি শিক্ষার্থীর প্রতি পূর্ণ মনোযোগ নিশ্চিত করতে ছোট ছোট গ্রুপে ক্লাস</li>
+                    <li><i class="fas fa-laptop"></i><span class="highlight">ডিজিটাল ক্লাসরুম:</span> কম্পিউটার ও ডিজিটাল ডিসপ্লে ব্যবহার করে আধুনিক পদ্ধতিতে পাঠদান</li>
+                    <li><i class="fas fa-user-friends"></i><span class="highlight">অভিভাবক সমন্বয়:</span> শিক্ষার্থীদের অগ্রগতির বিষয়ে অভিভাবকদের সাথে নিয়মিত পর্যালোচনা সভা</li>
                 </ul>
             </div>
             
             <div class="section">
-                <h2 class="section-title"><i class="material-icons">how_to_reg</i>ভর্তি তথ্য (২০২৬ শিক্ষাবর্ষ)</h2>
+                <h2 class="section-title"><i class="fas fa-user-graduate"></i>ভর্তি তথ্য (২০২৬ শিক্ষাবর্ষ)</h2>
                 <table class="admission-table">
                     <tr>
                         <th>ইংলিশ ভার্সন</th>
@@ -352,25 +639,25 @@
                         <td></td>
                     </tr>
                 </table>
-                <p style="margin-top: 10px; font-size: 14px; color: #555;">
+                <p style="margin-top: 15px; font-size: 0.9rem; color: #555;">
                     <strong>বিশেষ দ্রষ্টব্য:</strong> লেভেল ওয়ান থেকে ক্লাস টু পর্যন্ত <span class="highlight">ইংলিশ ভার্সন বাধ্যতামূলক</span>। ক্লাস থ্রি থেকে শিক্ষার্থীরা ইংলিশ ভার্সন অথবা বাংলা মিডিয়াম বেছে নিতে পারবে।
                 </p>
             </div>
             
             <div class="section">
-                <h2 class="section-title"><i class="material-icons">mosque</i>সমন্বিত ইসলামী শিক্ষা</h2>
+                <h2 class="section-title"><i class="fas fa-mosque"></i>সমন্বিত ইসলামী শিক্ষা</h2>
                 <div class="islamic-education">
-                    <div class="islamic-item"><i class="material-icons">auto_stories</i>কুরআন শিক্ষা</div>
-                    <div class="islamic-item"><i class="material-icons">bookmark</i>নির্বাচিত সূরা ও হাদিস হিফজ</div>
-                    <div class="islamic-item"><i class="material-icons">library_books</i>কুরআনিক অভিধান শিক্ষা</div>
-                    <div class="islamic-item"><i class="material-icons">record_voice_over</i>প্রয়োজনীয় দোয়া মুখস্থকরণ</div>
-                    <div class="islamic-item"><i class="material-icons">self_improvement</i>ইবাদত অনুশীলন</div>
-                    <div class="islamic-item"><i class="material-icons">music_note</i>ইসলামী সংগীত শিক্ষা</div>
+                    <div class="islamic-item"><i class="fas fa-quran"></i>কুরআন শিক্ষা (শুদ্ধ তেলাওয়াত)</div>
+                    <div class="islamic-item"><i class="fas fa-bookmark"></i>নির্বাচিত সূরা ও হাদিস হিফজ</div>
+                    <div class="islamic-item"><i class="fas fa-book"></i>কুরআনিক অভিধান শিক্ষা</div>
+                    <div class="islamic-item"><i class="fas fa-microphone"></i>প্রয়োজনীয় দোয়া মুখস্থকরণ</div>
+                    <div class="islamic-item"><i class="fas fa-praying-hands"></i>ইবাদত অনুশীলন ও ইসলামী আখলাক চর্চা</div>
+                    <div class="islamic-item"><i class="fas fa-music"></i>ইসলামী সংগীত শিক্ষা</div>
                 </div>
             </div>
             
             <div class="section">
-                <h2 class="section-title"><i class="material-icons">psychology</i>আমাদের আধুনিক পাঠদান পদ্ধতি</h2>
+                <h2 class="section-title"><i class="fas fa-brain"></i>আমাদের আধুনিক পাঠদান পদ্ধতি</h2>
                 <div class="teaching-methods">
                     <div class="method-card">
                         <div class="method-title">Montessori Method</div>
@@ -392,7 +679,7 @@
             </div>
             
             <div class="section">
-                <h2 class="section-title"><i class="material-icons">groups</i>আমাদের সুযোগ্য নেতৃত্ব</h2>
+                <h2 class="section-title"><i class="fas fa-users"></i>আমাদের সুযোগ্য নেতৃত্ব</h2>
                 <div class="leadership">
                     <div class="leader-card">
                         <div class="leader-name">ড. তাজুল ইসলাম</div>
@@ -408,7 +695,7 @@
             </div>
             
             <div class="section">
-                <h2 class="section-title"><i class="material-icons">event</i>ভর্তি কার্যক্রম ও সময়সূচি</h2>
+                <h2 class="section-title"><i class="fas fa-calendar-alt"></i>ভর্তি কার্যক্রম ও সময়সূচি</h2>
                 <div class="dates">
                     <div class="date-card">
                         <div class="date-title">ভর্তি ফরম বিতরণ শুরু</div>
@@ -419,33 +706,39 @@
                         <div class="date-value">১লা জানুয়ারি, ২০২৬</div>
                     </div>
                 </div>
+                <div style="text-align: center; margin-top: 20px;">
+                    <a href="tel:01788732394" class="cta-button">এখনই যোগাযোগ করুন</a>
+                </div>
             </div>
             
             <div class="section">
-                <h2 class="section-title"><i class="material-icons">contact_phone</i>যোগাযোগ করুন</h2>
+                <h2 class="section-title"><i class="fas fa-phone-alt"></i>যোগাযোগ করুন</h2>
                 <div class="contact-info">
                     <div class="contact-item">
-                        <i class="material-icons">location_on</i>
+                        <i class="fas fa-map-marker-alt"></i>
                         <div>
                             <span class="contact-label">ঠিকানা:</span> গোপালপুর বাজার, দফাদারপাড়া রোড (গ্রামীণ ও বাংলালিংক টাওয়ারের পার্শ্বে), গ্রাম: গোপালপুর, ডাক: খানপুর, উপজেলা: মণিরামপুর, জেলা: যশোর
                         </div>
                     </div>
                     <div class="contact-item">
-                        <i class="material-icons">phone</i>
+                        <i class="fas fa-phone"></i>
                         <div>
-                            <span class="contact-label">ফোন:</span> অফিস: ০১৭৮৮-৭৩২৩৯৪, রওশন আলম: ০১৭৯২-১৫৯৩০০, মামুন খান: ০১৭১৮-০২৩৩৮৯
+                            <span class="contact-label">ফোন:</span> 
+                            <div>অফিস: <a href="tel:01788732394" style="color: #1a5f3f; text-decoration: none;">০১৭৮৮-৭৩২৩৯৪</a></div>
+                            <div>রওশন আলম: <a href="tel:01792159300" style="color: #1a5f3f; text-decoration: none;">০১৭৯২-১৫৯৩০০</a></div>
+                            <div>মামুন খান: <a href="tel:01718023389" style="color: #1a5f3f; text-decoration: none;">০১৭১৮-০২৩৩৮৯</a></div>
                         </div>
                     </div>
                     <div class="contact-item">
-                        <i class="material-icons">email</i>
+                        <i class="fas fa-envelope"></i>
                         <div>
-                            <span class="contact-label">ইমেইল:</span> elitevisiongp@gmail.com
+                            <span class="contact-label">ইমেইল:</span> <a href="mailto:elitevisiongp@gmail.com" style="color: #1a5f3f; text-decoration: none;">elitevisiongp@gmail.com</a>
                         </div>
                     </div>
                     <div class="contact-item">
-                        <i class="material-icons">thumb_up</i>
+                        <i class="fab fa-facebook"></i>
                         <div>
-                            <span class="contact-label">ফেসবুক:</span> facebook.com/EliteVision2024
+                            <span class="contact-label">ফেসবুক:</span> <a href="https://facebook.com/people/EliteVision2024" target="_blank" style="color: #1a5f3f; text-decoration: none;">facebook.com/people/EliteVision2024</a>
                         </div>
                     </div>
                 </div>
